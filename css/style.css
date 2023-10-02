@@ -1,0 +1,254 @@
+/* общие стили */
+
+body {
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #d6d6d6;
+}
+
+/* стили модального окна*/
+
+.main-modal {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /*background-color: #d6d6d6;*/
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #272729;
+  border-radius: 20px;
+}
+
+.main-modal__title {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Arial", sans-serif;
+  color: #363636;
+}
+
+.main-modal__open {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #d2aaff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Arial", sans-serif;
+  line-height: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.main-modal__open:hover {
+  background-color: #d2aaff85;
+  transform: scale(0.85);
+  outline: none;
+  box-shadow: 0 0 10px 12px #d2aaff85;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.modal__container {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  background-color: #fcf1e0;
+  border-radius: 10px;
+  padding: 35px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+.modal__content {
+  width: 100%;
+}
+
+.modal__title {
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #363636;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  color: #363636;
+  font-size: 25px;
+  font-family: "Arial", sans-serif;
+}
+
+button,
+.button-table {
+  width: 80%;
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #cb9ffd;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover,
+.button-table:hover {
+  background-color: #d2aaff85;
+  outline: 1px solid #c18efc;
+}
+
+.button-table {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+.table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  background-color: #cacaca;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-family: "Arial", sans-serif;
+  color: #363636;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  color: #363636;
+}
+
+input:hover {
+  outline: 2px solid #c18efc;
+}
+
+.table {
+  width: 70%;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.table__number {
+  width: 21%;
+}
+
+.table__city {
+  width: 30%;
+}
+
+.table__quantity {
+  width: 27%;
+}
+
+.table__control {
+  width: 23%;
+}
+
+th,
+td {
+  border: 1px solid #cacaca;
+  padding: 8px;
+  text-align: center;
+  color: #363636;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+th {
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  background-color: #cb9ffd;
+  color: #ffffff;
+}
+
+/* Cтили для карт */
+
+.map {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.yandex-map {
+  width: 38%;
+}
+
+.highcharts-map {
+  width: 60%;
+}
+
+.highcharts-map__title,
+.yandex-map__title {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Arial", sans-serif;
+  color: #272729;
+}
+
+.yandex-map-container,
+.highcharts-map-container {
+  min-width: 80%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #272729;
+  border-radius: 20px;
+}
