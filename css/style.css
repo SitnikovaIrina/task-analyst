@@ -252,3 +252,7 @@ th {
   border: 1px solid #272729;
   border-radius: 20px;
 }
+
+.yandex-map-container {
+  height: 75%;
+}
