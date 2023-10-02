@@ -12,50 +12,52 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 <body>
-  <div class="map">
-    <div class="yandex-map">
-      <h1 class="yandex-map__title">Яндекс карта</h1>
-      <div class="yandex-map-container" id="yandex-map-container"></div>
+  <div class="wrapper">
+    <div class="map">
+      <div class="yandex-map">
+        <h1 class="yandex-map__title">Яндекс карта</h1>
+        <div class="yandex-map-container" id="yandex-map-container"></div>
+      </div>
+      <div class="highcharts-map">
+        <h1 class="highcharts-map__title">Карта с использованием библиотеки  Highcharts</h1>
+        <div class="highcharts-map-container" id="highcharts-map-container"></div>
+      </div>
     </div>
-    <div class="highcharts-map">
-      <h1 class="highcharts-map__title">Карта с использованием библиотеки  Highcharts</h1>
-      <div class="highcharts-map-container" id="highcharts-map-container"></div>
+    <div class="main-modal">
+      <h1 class="main-modal__title" >Модальное окно</h1>
+      <button class="main-modal__open" type="button">Открыть таблицу</button>
     </div>
   </div>
-  <div class="main-modal">
-    <h1 class="main-modal__title" >Модальное окно</h1>
-    <button class="main-modal__open" type="button">Открыть таблицу</button>
 
-    <div class="modal">
-      <div class="modal__container">
-        <div class="modal__content">
-          <button class="modal__close" type="button" aria-label="Закрыть">&#10006;</button>
-          <h2 class="modal__title">Численность населения в городах тульской области</h2>
+  <div class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        <button class="modal__close" type="button" aria-label="Закрыть">&#10006;</button>
+        <h2 class="modal__title">Численность населения в городах тульской области</h2>
+      </div>
+
+      <div class="table-container">
+        <div class="form-container">
+          <label for="number-input">Порядковый номер</label>
+          <input class="number-input" type="text" id="number-input" placeholder="Ввидите номер">
+
+          <label for="city-input">Название города</label>
+          <input class="city-input" type="text" id="city-input" placeholder="Ввидите название города">
+
+          <label for="quantity-input">Количество жителей</label>
+          <input class="quantity-input" type="text" id="quantity-input" placeholder="Ввидите количество жителей">
+
+          <button class="button-table" onclick="addData()">Добавить строки в таблицу</button>
         </div>
 
-        <div class="table-container">
-          <div class="form-container">
-            <label for="number-input">Порядковый номер</label>
-            <input class="number-input" type="text" id="number-input" placeholder="Ввидите номер">
-
-            <label for="city-input">Название города</label>
-            <input class="city-input" type="text" id="city-input" placeholder="Ввидите название города">
-
-            <label for="quantity-input">Количество жителей</label>
-            <input class="quantity-input" type="text" id="quantity-input" placeholder="Ввидите количество жителей">
-
-            <button class="button-table" onclick="addData()">Добавить строки в таблицу</button>
-          </div>
-
-          <table class="table">
-            <tr>
-              <th class="table__number">Порядковый номер</th>
-              <th class="table__city">Название города</th>
-              <th class="table__quantity">Количество жителей</th>
-              <th class="table__control">Управление</th>
-            </tr>
-          </table>
-        </div>
+        <table class="table">
+          <tr>
+            <th class="table__number">Порядковый номер</th>
+            <th class="table__city">Название города</th>
+            <th class="table__quantity">Количество жителей</th>
+            <th class="table__control">Управление</th>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
