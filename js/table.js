@@ -25,20 +25,20 @@ function editData(button) {
   // Получаем строку при нажатии кнопки
   let row = button.parentNode.parentNode;
 
-  // Получаем ячейки внутри строки
-  let numberCell = row.cells[0];
-  let sityCell = row.cells[1];
-  let quantityCell = row.cells[2];
+  row.cells[0].setAttribute('contenteditable', true);
+  row.cells[1].setAttribute('contenteditable', true);
+  row.cells[2].setAttribute('contenteditable', true);
 
-  // обновление данных
-  let numberInput = prompt("Введите новые данные:", numberCell.innerHTML);
-  let sityInput = prompt("Введите новые данные:", sityCell.innerHTML);
-  let quantityInput = prompt("Введите новые данные:", quantityCell.innerHTML);
+  // Открываем и закрываем подсказку
+  let popap = document.querySelector('.popap');
 
-  // обновление содержимого ячейки
-  numberCell.innerHTML = numberInput;
-  sityCell.innerHTML = sityInput;
-  quantityCell.innerHTML = quantityInput;
+  setTimeout(function () {
+    popap.classList.add('is-visible')
+  }, 200)
+
+  setTimeout(function () {
+    popap.classList.remove('is-visible')
+  }, 3000)
 }
 
 function deleteData(button) {
@@ -53,7 +53,7 @@ function deleteData(button) {
 function clearInputs() {
 
   // Очистка полей ввода
-  document.querySelector("number-input").value = "";
-  document.querySelector("city-input").value = "";
-  document.querySelector("quantity-input").value = "";
+  document.querySelector(".number-input").value = "";
+  document.querySelector(".city-input").value = "";
+  document.querySelector(".quantity-input").value = "";
 }

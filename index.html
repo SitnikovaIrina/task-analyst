@@ -37,17 +37,25 @@
       </div>
 
       <div class="table-container">
-        <div class="form-container">
-          <label for="number-input">Порядковый номер</label>
-          <input class="number-input" type="text" id="number-input" placeholder="Ввидите номер">
+        <div class="popap-container">
+          <div class="form-container">
+            <label for="number-input">Порядковый номер</label>
+            <input class="number-input" type="text" id="number-input" placeholder="Ввидите номер">
 
-          <label for="city-input">Название города</label>
-          <input class="city-input" type="text" id="city-input" placeholder="Ввидите название города">
+            <label for="city-input">Название города</label>
+            <input class="city-input" type="text" id="city-input" placeholder="Ввидите название города">
 
-          <label for="quantity-input">Количество жителей</label>
-          <input class="quantity-input" type="text" id="quantity-input" placeholder="Ввидите количество жителей">
+            <label for="quantity-input">Количество жителей</label>
+            <input class="quantity-input" type="text" id="quantity-input" placeholder="Ввидите количество жителей">
 
-          <button class="button-table" onclick="addData()">Добавить строки в таблицу</button>
+            <button class="button-table" onclick="addData()">Добавить строки в таблицу</button>
+          </div>
+
+          <div class="popap">
+            <div class="popap__content">
+              <h3>Начните редактировать ячейки</h3>
+            </div>
+          </div>
         </div>
 
         <table class="table">

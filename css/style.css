@@ -89,7 +89,6 @@ body {
 .modal__container {
   width: 80%;
   height: 80%;
-  position: relative;
   background-color: #fcf1e0;
   border-radius: 10px;
   padding: 35px;
@@ -160,13 +159,46 @@ button:hover,
   align-items: flex-start;
 }
 
-.form-container {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
+/* Стили для попапа */
+
+.popap-container {
+  width: 27%;
   position: sticky;
   top: 20px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popap {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #cacaca;
+  border-radius: 10px;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.popap__content h3 {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #363636;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
   background-color: #cacaca;
   border-radius: 10px;
 }
@@ -224,9 +256,14 @@ td {
   font-family: "Arial", sans-serif;
 }
 
+.td:hover {
+  border: 2px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 th {
   font-size: 18px;
-  font-family: "Arial", sans-serif;
   background-color: #cb9ffd;
   color: #ffffff;
 }
@@ -268,8 +305,6 @@ th {
   margin: 0 auto;
   padding: 50px;
   padding-top: 0;
-  /*border: 1px solid #272729;
-  border-radius: 20px;*/
 }
 
 .yandex-map-container {
